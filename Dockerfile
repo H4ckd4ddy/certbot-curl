@@ -1,7 +1,7 @@
 FROM certbot/certbot:latest
 
 RUN apk add --update \
-	curl && \
+	curl jq && \
 	rm -rf /var/cache/apk/*
 
 VOLUME /etc/letsencrypt
