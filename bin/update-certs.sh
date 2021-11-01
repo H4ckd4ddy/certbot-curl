@@ -29,7 +29,7 @@ while true; do
 		--preferred-challenges=dns \
 		--manual-auth-hook authenticate.sh \
 		--manual-cleanup-hook cleanup.sh \
-		--post-hook reload-nginx.sh \
+		--post-hook reload-container.sh \
 		--email "$EMAIL" \
 		-d "$DOMAINS" \
 		--server https://acme-v02.api.letsencrypt.org/directory

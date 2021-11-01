@@ -1,12 +1,12 @@
 # certbot-curl
+
 Modular Docker image for certbot
 
-
-Use with docker-compose :
+docker-compose example :
 
 ```
 certbot-curl:
-  image: hackdaddy/certbot-curl:release-1.0
+  image: hackdaddy/certbot-curl:release-1.2
   volumes:
     - type: bind
       source: /path/to/certs
@@ -17,7 +17,7 @@ certbot-curl:
   environment:
     - PROVIDER=Gandi
     - API_KEY=xxxxxxxxxxxxxxxxxxxx
-    - EMAIL=my-email@exemple.com
-    - DOMAINS=exemple.com,*.exemple.com
-    - NGINX_CONTAINER=name-of-my-nginx-container
+    - EMAIL=my-email@example.com
+    - DOMAINS= example.com,*. example.com
+    - CONTAINER_TO_RESTART=name-of-my-nginx-container
 ```
