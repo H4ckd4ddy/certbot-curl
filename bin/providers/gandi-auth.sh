@@ -1,15 +1,13 @@
 #!/bin/sh
 
-api='https://dns.api.gandi.net/api/v5'
+api='https://api.gandi.net/v5/livedns'
 
 domain=$1
 record_name=$2
 token=$3
 
-curl -s -X PUT \
+curl -s -X POST \
 	-H "Content-Type: application/json" \
-	-H "X-Api-Key: $API_KEY" \
-	-d "{\"rrset_type\": \"TXT\",
-		 \"rrset_ttl\": 300,
-		 \"rrset_values\": [$token]}" \
+	-H "authorization: Bearer $API_KEY" \
+	-d "{\"rrset_ttl\": 300, \"rrset_values\": [$token]}" \
 	"$api/domains/$domain/records/$record_name/TXT"

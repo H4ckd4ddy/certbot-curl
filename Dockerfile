@@ -1,4 +1,4 @@
-FROM certbot/certbot:latest
+FROM certbot/certbot:v1.26.0
 
 RUN apk add --update \
 	curl jq && \
