@@ -6,7 +6,7 @@ domain=$1
 record_name=$2
 token=$3
 
-curl -s -X POST \
+curl -s -X PUT \
 	-H "Content-Type: application/json" \
 	-H "authorization: Bearer $API_KEY" \
 	-d "{\"rrset_ttl\": 300, \"rrset_values\": [$token]}" \
