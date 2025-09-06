@@ -6,7 +6,7 @@ docker-compose example :
 
 ```
 certbot-curl:
-  image: hackdaddy/certbot-curl:release-1.2
+  image: hackdaddy/certbot-curl:release-1.4
   volumes:
     - type: bind
       source: /path/to/certs
